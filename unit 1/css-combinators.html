@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>CSS Combinators</title>
+   <style>
+    /*selector1 selector2 minimum*/
+    div+p{background-color: teal;
+    color:rebeccapurple;
+    /*adjacent sibling selector (+)betwee div
+    only next sibling not child is selected adn only one not all*/;}
+    div~p{background-color: blue;
+    color:burlywood;
+    /*general sibling selector (~) betwee div and p 
+    all p general siblings of div ; div not included
+    cousins also included of same level*/;}
+    div>p{background-color: whitesmoke;
+    color:black
+    /*sibling selector (>) betwee div and p only the real child not all decendant*/;}
+    div p{background-color: blueviolet;
+    color:bisque
+    /*descendent selector space betwee div and p*/;}
+   </style>
+</head>
+<body>
+    <p>if something is not related to each other in any way and completely different 
+        use comma to separate them such as h3,p,div{font-align:center;}</p>
+<div>
+    <P>few properties are also inherited by decendants so we dn't need to 
+    write code again for that such as p is desendant of div and if 
+    div text is aligned center p will automatically do same
+</P>
+<p>para 2</p>
+<p>para3</p> 
+<div><P>para8</P>
+    <p>para 9</p>
+    <span style="font-weight:3px">h3,p,div</span>span to highlight one letter word specifically
+    <p>para7</p>
+</div>
+</div>
+<p>para4</p> 
+<p>para 5</p>
+</body>
+</html> 
+<p>four types: descendant selector(space) child(>) general sibling (~) adjacent sibling(+)</p>
+<!--relationship between two or more selectors-->
