@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>css grid-media</title>
+   <style>
+    #container{
+        display:grid;
+        grid-template-columns: repeat(4, 2fr) ;
+       width:80%;
+       margin:auto;
+       /* grid-row-gap: 10px;
+        grid-column-gap: 20px;*/
+        gap:10px 20px;
+        /*2 colmns created with size 100px which is width of div now
+        and rows control heights*/
+    }
+
+    #container>div{
+       border:2px solid red;
+       height:200px;
+    }
+
+   </style>
+</head>
+<body>
+    <div id="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+<p>flex is one dimensional but grid is multi dimensional layout. flex has row columns only.
+    we can also use flex to create grid style, but flex will be a bit complex.
+    grid is also a display property just like flex. grid generally display like block which is a default property of display 
+but grid has rows and coln.</p>
+<div id="container">
+    <div>1</div>
+<div>2</div>
+<div>3</div>
+</div>
+<p>units for width height we can use px or % or fraction fr
+    fr is better than % bcz content will not overflow
+
+</p>
+</body>
+</html> 
+<!-- if columns are 100 then we can't write 100 for 100 times
+grid-template-columns: repeat(2,100px) ; 2 is number of times and 100 is size of each column
+if column are of same size then repeat can be useds-->

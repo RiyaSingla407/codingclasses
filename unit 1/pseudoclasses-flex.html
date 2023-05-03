@@ -15,7 +15,7 @@
         background-color:blue;
     }
     /*selector:pseudo class*/
-    buttorn:hover{
+    button:hover{
         background-color:red;
         font-size:30px;
     }
@@ -30,17 +30,68 @@
    div>p:last-child(old){
 color:rebeccapurple; /*colour separate to all old rows*/
     }
+    #parent{
+        border:5px dashed red;
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:flex-start;
+        padding:50px;
+        align-items:flex-start;
+         /*default for flex direction is row, for wrap is no wrap, 
+         for justify flex-start for align item stretch
+         default value for order is 0*/
+    }
+#parent>div{
+    font-size:20px;
+    text-align:center;
+}
+#parent > div:first-child {
+   background-color: brown;
+   padding:100px;
+   order:0;
+   flex-grow:1;
+}
+#parent > div:nth-child(2) {
+   background-color: crimson;
+   padding:60px;
+   order:0;
+}
+#parent > div:last-child {
+   background-color:blueviolet;
+   padding:80px;
+   order:0;
+   flex-grow:1;
+}
    </style>
 </head>
 <body>
     <button>login</button>
 <h1>welcome to masai</h1>  
 <input placeholder="enter name"/>
-<div><p>p1</p>
+<div id="parent">
+    <div>
+item1
+</div>
+<div>flex-grow:1,2,3</div>
+<div>order:0,1,2</div>
+<div>item 2</div>
+<div>item 3</div>
+<div>item 2</div>
+<div>item 3</div>
+<div>justify-content: flex-end; center,space-evenly, space-around,space-between</div>
+<div>align-items: flex-start;flex-end; flex-center; baseline, stretch</div>
+<div>flex-wrap:wrap , no wrap , wrap-reverse</div>
+<div>flex-direction:row,row-reverse, colm-reverse, colm</div>
+</div>
+
+<div><p>flex provides more control on css</p>
     <p>p2 some dummy text to learn psudo element</p>
-    <p>p3</p>
-    <p>p4</p>
-    <p>p5</p>
+    <p>if the order is same for two or more then it will go
+        as per priority in code writing.
+    </p>
+    <p>child properties. 1.order, 2. flex-grow</p>
+    <p>flex grow occupies the remaining space in ratio of grow 1:1 or 2:1</p>
     <p>p6</p>
     <p>p7</p>
     <p>p8</p>
@@ -50,5 +101,10 @@ color:rebeccapurple; /*colour separate to all old rows*/
 
 </body>
 </html> 
+<!--dispay flex is parent property or row reverse colm reverse
+wrap , no wrap , wrap-reverse
+order helps in deciding which value will appear 1st and which value will appear last
+align - items vertical alignment, flex-start;flex-end; flex-center; baseline
+for justify horizontal alignment, flex end; center,space evenly, space around,space between-->
 <!--when we hover our cursor over any picture or tab it changes its colour
 or it becomes dim that is called as pseudo class-->
