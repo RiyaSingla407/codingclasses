@@ -4,10 +4,38 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>media query</title>
+   <style>
+ body{
+         background-color:teal;
+      }
+      @media screen and (min-width:768px) and (max-width:900px){
+      body{
+         background-color:crimson;
+      }
+   } 
+   @media screen and (max-width: 767px){
+      body{
+         background-color:blueviolet;
+      }
+    
+   } 
+  
+   </style>
 </head>
 <body>
-   
+  <p>media query is a feature that css has it basically helps in changing dimensiona of a code as per different screens
+   we will write for large screens 1st and then for small screens
+  </p> 
 </body>
 </html>
-<!--we can do ! this and eneter to get html boiler plate-->
+<!--we can do ! this and enter to get html boiler plate
+syntax
+@media screen and (min-width:) and (max-width:)
+@media it declares we are using media
+media type- all/print/screen three types print- print preview and it breaks pages automatically
+screen- ui will change acc to screen size 
+all - both print + screen
+and - logical operator- ties all condition together
+media featurer- min-width:340px and max-width:600px for mobile screens
+tabs-601,900px laptops-901 and these varies from company to company-->
